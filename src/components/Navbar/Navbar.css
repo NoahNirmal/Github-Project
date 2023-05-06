@@ -1,0 +1,39 @@
+.navbarContainer{
+    width: 100%;
+    height: 12vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px gray solid;
+}
+
+.navbarContainer ul{
+    /* border: 2px white solid; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    list-style-type: none;
+
+
+}
+
+.navbarContainer ul li a{
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+.navbarContainer button{
+    color: white;
+    background-color: transparent;
+    border: 1px gray solid;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
