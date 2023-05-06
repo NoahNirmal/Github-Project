@@ -23,10 +23,9 @@ export const Navbar=()=>{
                 <li><Link to='/' onClick={()=>{
                  localStorage.clear()
                  }}> Logout</Link></li>
-                <button onClick={()=>{
-                    console.log("hello")
+                <li><button onClick={()=>{
                     dispatch( toggletheme())
-                }}>{theme?"Light":"Dark"}</button>
+                }}>{theme?"Light":"Dark"}</button></li>
 
             </ul>
 

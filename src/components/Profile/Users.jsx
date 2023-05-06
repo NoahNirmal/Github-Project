@@ -11,7 +11,7 @@ export const Profile = () => {
     // console.log(details.userrepos)
     const { name } = useParams()
 
-    console.log(name , "params")
+    // console.log(name , "params")
 
     useEffect(() => {
         async function getUsersdetails() {
@@ -47,9 +47,9 @@ export const Profile = () => {
                 <div className='Avatar_details'>
                     <h2>{details.userdetails.login}</h2>
                     <div className='Avatar_btns'>
-                        <button>Repos:{details.userdetails.public_repos}</button>
-                        <button>Followers:{details.userdetails.followers}</button>
-                        <button>Following:{details.userdetails.following}</button>
+                        <button className='pink'>Repos:{details.userdetails.public_repos}</button>
+                        <button className='violet'>Followers:{details.userdetails.followers}</button>
+                        <button className='aqua'>Following:{details.userdetails.following}</button>
 
 
                     </div>
@@ -67,7 +67,7 @@ export const Profile = () => {
                     details.userrepos.map((ele) => {
                         return (
                             <>
-                                <div className="repos_Details">
+                                <div className="repos_Details" key={ele.id}>
                                     <div className="repos_detailsleft">
                                         <h3>{ele.name} :- <button>{ele.language}</button></h3>
                                         <p>{ele.description}</p>

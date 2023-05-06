@@ -11,7 +11,7 @@ import { Protected } from './components/Protected/Protected';
 function App() {
   const location =useLocation()
   const theme =useSelector((state)=>state.reducer.theme)
-  console.log(theme)
+  // console.log(theme)
 
   const dark ={backgroundColor:"black",color:"white"}
   const light ={color:"black"}

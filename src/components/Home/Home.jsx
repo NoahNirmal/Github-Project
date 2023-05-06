@@ -12,8 +12,9 @@ export const Home = () => {
     const userdata = useSelector((state) => state.reducer)
     console.log(userdata.users)
 
-    const dark ={color:"black"}
-    const light ={color:"white"}
+    const dark ={color:"white"}
+    const light ={color:"black",backgroundColor:"rgb(189, 242, 242)"}
+    const lightcard={backgroundColor:"white"}
 
    
     const navigate = useNavigate()
@@ -32,8 +33,8 @@ export const Home = () => {
 
     }, [dispatch])
     return (
-        <div className='homeContainer' style={userdata.theme?light:dark}>
-            <div className='cardsContainer'>
+        <div className='homeContainer' style={userdata.theme?dark:light}>
+            <div className='cardsContainer'  >
 
 
                 {
@@ -42,7 +43,7 @@ export const Home = () => {
                             <>
                                 <div className='cards' key={ele.id} onClick={()=>{
                                  navigate(`/profile/${ele.login}`)
-                                }}>
+                                }} style={userdata.theme?dark:lightcard}>
                                     <div className='profile_avatar'>
                                         <img src={ele.avatar_url} alt="" />
 
